@@ -1,5 +1,5 @@
  
-#!/bin/sh
+#!/bin/bash
 
 choice=$(printf "%s\n%s\n%s" "Shutdown" "Reboot" "Exit" | dmenu -i -p "Choose action: ")
 [ $choice = "Shutdown" ] && doas poweroff

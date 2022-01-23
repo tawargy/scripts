@@ -1,9 +1,0 @@
-#!/bin/sh
-
-icon=""
-#brightness-max=$(brightnessctl m)
-brightness=$(brightnessctl g)
-
-#res=brightness / brightness-max * 100
-
-printf "$icon$brightness"

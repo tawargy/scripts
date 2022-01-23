@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CURRENT_KEY=$(xset -q|grep LED| awk '{ print $10 }')
+
+if [ $CURRENT_KEY -eq 00000000 ]
+then echo EN
+else 
+     echo AR
+fi
+
+#pkill -RTMIN+10 dwmblocks

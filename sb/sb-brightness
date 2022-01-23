@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+icon="🔆"
+b_max=$(brightnessctl m)
+brightness=$(brightnessctl g)
+
+float_res=$(echo "scale=1;$brightness / $b_max * 100" | bc -l)
+int_res=$(echo $float_res / 1 | bc)
+echo "${icon}${int_res}%"
+
+ 
